@@ -1,0 +1,312 @@
+@import "requires";
+@import "global";
+
+@include font-face( "calc1", font-files( "calc1.woff2", "calc1.woff", "calc1.ttf", "calc1.svg"), "calc1.eot", 400);
+
+.calc-icon:before{
+ display: inline-block;
+  font-family: 'calc1';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+.flaticon-A:before {
+ content: "\41";
+}
+.flaticon-B:before {
+ content: "\42";
+}
+
+#calculator{
+  font-family: $myriad;
+	margin: 100px auto 0;
+	max-width: 742px;
+	opacity: 1;
+  position: relative;
+	width: 100%;
+	.calculator-header{
+		text-transform: uppercase;
+		font: 700 30px $OpSans;
+		padding-bottom: 24px;
+		@include text-shadow(5px 2px 20px rgba(0,0,0,1));
+	}
+	.tab-body-item{
+		clear: both;
+		font-size: 16px;
+		height: 200px;
+		background: #F4F5F5;
+	}
+	.tab-header-item{
+		width: 163px;
+		height: 52px;
+		display: inline-block;
+		color: red;
+		font: 400 15px $myriad;
+		background: #FBFBFB;
+		.act-tab{
+			background: #F4F5F5;
+		}
+	}
+  .tab-wrapper {
+    @include border-radius(7px);
+    background-color: #F4F5F5;
+    height: 205px;
+    padding-top: 35px;
+  }
+  .ui-tabs .ui-tabs-nav {
+    background-color: transparent;
+    border: none;
+    font-size: 0;
+    text-align: center;
+    li {
+      @include box-sizing(border-box);
+      @include border-radius(0);
+      background-color: #F4F5F5;
+      border: none;
+      display: inline-block;
+      float: none;
+      font-size: 15px;
+      margin: 0!important;
+      outline: none;
+      padding: 0;
+      text-align: center;
+      width: 23%;
+      &.ui-tabs-active a {
+        border-bottom: 1px solid transparent;
+      }
+      &:first-letter {
+        text-transform: uppercase;
+      }
+      a {
+        @include box-sizing(border-box);
+        border: 1px solid #D8D9D9;
+        color: #A8A8A8;
+        display: block;
+        font-family: $myriad;
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+  // tabs-1 & tabs-3
+  #paperType-button,
+  #academicLevel-button,
+  #deadlineDate {
+    @include border-radius(5px);
+    border: 1px solid #D8D9D9;
+    background-color: #fff;
+    color: #A8A8A8;
+    outline: none;
+    padding: 15px 20px;
+    width: 80%;
+  }
+  // tabs-2
+  .tabs2-input-buttons-wrapper {
+    @include display-flex(flex);
+    @include flex-direction(row);
+    @include justify-content(center);
+    font-size: 0;
+  }
+  .input-button-left,
+  .input-button-center,
+  .input-button-right {
+    display: inline-block;
+    font-size: 16px;
+    & button, & input {
+      @include box-sizing(border-box);
+      font-family: $myriad;
+      padding: 15px 20px;
+      border: 1px solid #D8D9D9;
+      color: #A8A8A8;
+      outline: none;
+      text-align: center;
+    }
+    & button {
+      background-color: #FBFBFB;
+    }
+    & input {
+      border-left: none;
+      border-right: none;
+      width: 200px;
+    }
+  }
+  .input-button-left button {
+    @include border-top-left-radius(5px);
+    @include border-bottom-left-radius(5px);
+  }
+  .input-button-right button {
+    @include border-top-right-radius(5px);
+    @include border-bottom-right-radius(5px);
+  }
+  //tabs-4
+  .flaticon-A {
+    @include box-sizing(border-box);
+    background-color: #fff;
+    display: inline-block;
+    margin: 0 auto;
+    &:before {
+      @include box-sizing(border-box);
+      content: "\41";
+      color: #A8A8A8;
+      display: block;
+      font-size: 26px;
+      height: 100%;
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      width: 50px;
+    }
+  }
+  #deadlineDate {
+    background-color: transparent;
+    cursor: default;
+    width: 440px;
+    z-index: 100;
+    position: relative;
+  }
+  
+  // tabs-info
+  .input-button {
+    clear: both;
+    .words-span {
+      color: #A8A8A8;
+      font-size: 10px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 22%;
+    }
+  }
+  .calculator-info-wrapper {
+    bottom: 145px;
+    color: #A8A8A8;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+  .text-one {
+    font-family: $myriad;
+    &:before {
+      content: "";
+      margin-top: 6px;
+      display: inline-block;
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      margin-left: -20px;
+      background: url(../img/danger.png) center center no-repeat;
+    }
+  }
+  .text-two {
+    color: #7ECDFD;
+    font-family: $myriad;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  //total price
+  .total-price-wrapper {
+    position: relative;
+    text-align: center;
+    top: -36px;
+    .input-and-fonts {
+      @include border-radius(50px);
+      background-color: #fff;
+      border: 1px solid #D8D9D9;
+      display: inline-block;
+      padding: 3px 5px;
+      text-align: right;
+      width: 450px;
+      p, button {
+        font-family: $myriad;
+        display: inline-block;
+      }
+      p {
+        color: #A8A8A8;
+        &:first-letter {
+          text-transform: uppercase;
+        }
+        span {
+          display: inline-block;
+          font-size: 34px;
+          margin-top: -4px;
+          vertical-align: middle;
+        }
+      }
+      button {
+        @include border-radius(25px);
+        background-color: #FA5924;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        margin-left: 40px;
+        margin-top: 2px;
+        padding: 15px 25px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+// other styles
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  border: 1px solid #D0D0D0;
+  background: #A8A8A8;
+}
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+  background: #F4F5F5;
+  color: #A8A8A8;
+}
+.ui-datepicker th span {
+  color: #A8A8A8;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover {
+  color: #A8A8A8;
+}
+.ui-state-active, .ui-widget-content .ui-state-active {
+  color: #fff;
+}
+.ui-state-active{
+  a{
+    background-color: #FA5924!important;
+    color: #fff!important;
+  }
+}
+
+#tabs {
+  background-color: transparent;
+  border: none;
+}
+
+@media all and (min-width: 1250px) {
+	#first-screen{
+		background: blue url(../img/people-large.png) bottom center no-repeat;
+	}
+}
+@media (min-width: 750px) and (max-width: 1250px) {
+	#first-screen{
+		background: blue url(../img/people-middle.png) bottom center no-repeat;
+	}
+	
+}
+
+@media all and (max-width: 750px) {
+	#calculator{
+		margin-top: 70px;
+		.tab-header-item{
+			float: left;
+			width: 25%;
+		}
+    img {
+      height: auto;
+      width: 100%;
+    }
+	}
+
+}

@@ -1,0 +1,108 @@
+@import "requires";
+@import "global";
+$color-button: #000;
+$message-done: #00508E;
+$message-error: #002C52;
+$button-on-hover: #BE161E;
+.glob-content{
+	margin: 10% 0;
+}
+#glob-footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+#forgot{
+	*::selection{
+		background-color: transparent;
+	}
+	max-width: 600px;
+	margin-top: 30px;
+	h1{
+		font-family: $OpSans;
+		text-transform: uppercase;
+		font-weight: 700;
+		text-align: left;
+		font-size: 25px;
+		color: #000;
+		margin: 0 auto 30px;
+		&::selection{
+			background-color: #000;
+			color: #fff;
+		}
+	}
+	p{
+		text-indent: 0;
+		&::selection, *::selection{
+			background-color: #000;
+			color: #fff;
+		}
+
+	}
+	.form input.invalid{
+		background-color: #BE161E!important;
+	}
+	form{
+		margin: 40px auto 0;
+		font-size: 0;
+		position: relative;
+		input{
+			border: 1px solid #dfdfdf;
+			@include border-radius(3px 0 0 3px);
+			height: 38px;
+		    display: inline-block;
+		    width: 60%;
+		    float: left;
+		    color: #898888;
+		    border-right: 0;
+		    &::selection{
+				background-color: #000;
+				color: #fff;
+			}
+		    @include box-sizing(border-box);
+	        text-align: left;
+		    font-weight: 400;
+		    padding-left: 15px;
+		    &:focus{
+				outline: 0;
+			}
+		}
+		#reset-password{
+			float: left;
+			width: 40%;
+			height: 38px;
+		    @include box-sizing(border-box);
+		    border: 0;
+		    background: $color-button;
+		    color: #fff;
+		    font-size: 13px;
+		    text-transform: uppercase;
+			@include border-radius(0 3px 3px 0);
+		    @include transition(all .1s linear);
+		    &:hover{
+				background: $button-on-hover;
+		    }
+		    &::selection{
+				background-color: transparent;
+			}
+		}
+		.call-back-message{
+			font-size: 13px;
+			position: absolute;
+			bottom: 100%;
+			display: none;
+			&.done{
+				color: $message-done;
+			}
+			&.error{
+				color: $message-error;
+			}
+		}
+	}
+}
+@media all and (max-width: 750px) {
+	.content{
+		padding: 15% 0;
+	}
+}

@@ -1,0 +1,220 @@
+#glob-footer{
+    background-color: #000000;
+    .container-nav{
+        border-bottom: 1px solid #737373;
+        .glob-container{
+             .logo-footer{
+                float: left;
+                position: relative;
+                top: 46px;
+                padding-right: 10px;
+                margin-right: 10px;
+                img{
+                    &::selection{
+                        background-color: transparent;
+                    }
+                }
+            }
+            .footer-nav{
+                float: left;
+                @include box-sizing(border-box);
+                text-align: center;
+                padding: 41px 0 43px;
+                &::selection{
+                    background-color: transparent;
+                }
+                li{
+                    display: inline-block;
+                    padding: 3px 5px;
+                    &::selection{
+                        background-color: transparent;
+                    }
+                    &.active-page{
+                        &:after{
+                            width: 100%;
+                        }
+                    }
+                    &:after{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        background-color: #BE161E;
+                        height: 2px;
+                        @include transition(all .2s linear);
+                    }
+                    &:hover{
+                        &:after{
+                            width: 100%;
+                        }
+                    }
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                        font: 400 18px $OpSans;
+                        &::selection{
+                            background-color: transparent;
+                        }
+                    }
+                   .info{
+                        img{
+                            width: 10px;
+                        }
+                   }
+                   
+                }
+            }
+             .footer-button{
+                position: relative;
+                top: 35px;
+                float: right;
+                background-color: #fff;
+                color: #000;
+                padding: 8px 15px 12px;
+                text-decoration: none;
+                font: 400 18px $OpSans;
+                @include transition(all .1s linear);
+                &:hover{
+                    background-color: #BE161E;
+                    color: #fff;
+                }
+                &::selection{
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .sub-menu-container{
+        float: right;
+        color: #fff;
+        position: relative;
+        font: 400 18px $OpSans;
+        margin-right: 15px;
+
+        &.open{
+            .sub-menu-nav{
+                @include transform(scale(1));
+            }
+            .sub-menu-info{
+                &:after{
+                    @include transform(rotate(135deg));
+                    top: -4px;
+                }
+            }
+        }
+        .sub-menu-nav{  
+            position: absolute;
+            bottom: 100%;
+            min-width: 200px;
+            left: 50%;
+            z-index: 20;
+            margin-left: -100px;
+            @include transform(scale(0));
+            @include transition(all .1s linear);
+            @include transform-origin(center bottom);
+            transform-origin: center bottom;
+            -webkit-transform-origin: center bottom;
+            ul{
+                background-color: #000;
+                li{
+                    list-style-type: none;
+                    padding-left: 0;
+                    @include transition(all .2s linear);
+                    &:first-child{
+                     &.active-page{
+                        
+                        a{
+                            border: 1px solid #000;
+                        }
+                    }   
+                    }
+                    &.active-page{
+                        
+                        a{
+                            background-color: #BE161E;
+                            color: #fff;
+                            &:hover{
+                                color: #fff;
+                            }
+                        }
+                    }
+                    a{
+                        display: block;
+                        border-bottom: 1px solid #fff;
+                        padding: 10px 20px;
+                        color: #fff;
+                        font: inherit;
+                        text-decoration: none;
+                        &::selection{
+                            background-color: transparent;
+                        }
+                    }
+                    &:hover{
+                         background-color: #fff;
+                         a{
+                            color: #000;
+                         }   
+                        }
+                }
+            }
+        }
+        .sub-menu-info{
+            margin-top: 44px;
+            background-color: transparent;
+            cursor: pointer;
+            border: 0;
+            color: inherit;
+            font: inherit;
+            &::selection{
+                background-color: transparent;
+            }
+            &:after{
+                position: relative;
+                content: '';
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                margin-left: 8px;
+                border: 1px solid #fff;
+                @include box-sizing(border-box);
+                border-bottom: 0;
+                border-left: 0;
+                @include transform(rotate(-45deg));
+                @include transform-origin(center center);
+                transform-origin: center center;
+                -webkit-transform-origin: center center;
+                @include transition(all .1s linear);
+            }
+            &:focus{
+                outline: 0;
+            }    
+        }
+    }
+    .money-bunner{
+        margin: 30px auto;
+        text-align: center;
+        img{
+            width: 100%;
+            height: auto;
+            &::selection{
+                background-color: transparent;
+            }
+        }
+    }
+    .glob-copy{
+        text-align: center;
+        padding: 30px 0;
+        color: #474747;
+        display: block;
+        font: 300 16px $OpSans;
+        &::selection{
+            background-color: transparent;
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    #glob-footer .container-nav .glob-container .footer-nav{
+        width: 100%;
+
+    }
+}

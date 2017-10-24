@@ -1,0 +1,149 @@
+.bg-samples {
+	background-image: url(../img/samples/samples.png);
+}
+.sample-cont {
+	color: #ffffff;
+}
+.sample {
+	padding: 20px 6%;
+	font-size: 12pt;
+	font-weight: 700;
+}
+.sample-stripe {
+	display: block;
+	height: 5px;
+	width: 100%;
+	background-color: #fd6251;
+	float: left;
+	margin-top: 50px;
+}
+
+.sample-cont h1 {
+	text-align: center;
+	font-size: 40pt;
+	font-weight: 900;
+	letter-spacing: 3px;
+	margin-bottom: 10px;
+}
+.sample h3 {
+	font-size: 24pt;
+	margin: 0;
+	font-weight: 900;
+}
+.sample a {
+	background-color: #da4a3a;
+	color: #ffffff;
+	font-size: 16pt;
+	padding: 5px 25px;
+	display: block;
+	margin-top: 5px;
+	text-align: center;
+	text-decoration: none;
+	transition: 0.3s;
+	-o-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+.sample a:hover {
+	transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+}
+.left {
+	margin-right: 5px;
+}
+@media screen and (max-width:1200px) {
+	.sample {
+		padding: 20px 5%;
+		font-size: 12pt;
+	}
+}
+
+@media screen and (max-width:992px) {
+	.sample {
+		padding: 20px 5%;
+		font-size: 11pt;
+	}
+	.sample a {
+
+		font-size: 14pt;
+		padding: 12px 23px;
+		display: inline-block;
+		margin-top: 5px;
+	}
+	.sample-cont h1 {
+		font-size: 34pt;
+	}
+	.sample h3 {
+		font-size: 21pt;
+		margin: 0;
+	}
+
+}
+
+@media screen and (max-width:768px)  {
+	.sample {
+		padding: 20px 5%;
+		font-size: 11pt;
+		width: 50%;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.right {
+		text-align: right;
+		float: right;
+	}
+	.left {
+		text-align: left;
+		float: left;
+	}
+	.sample-row {
+		overflow: hidden;
+		margin: 3px auto;
+	}
+	.sample h3 {
+		font-size: 21pt;
+		margin-bottom: 10px;
+	}
+	.sample a {
+
+		font-size: 14pt;
+		padding: 12px 23px;
+		display: block;
+	}
+
+}
+@media screen and (max-width:500px) {
+	.sample {
+		padding: 20px 5%;
+		font-size: 11pt;
+		width: 70%;
+		margin-bottom: 10px;
+	}
+	.sample h3 {
+		font-size: 16pt;
+		margin-bottom: 10px;
+	}
+	.sample a {
+
+		font-size: 12pt;
+		padding: 10px 23px;
+		display: block;
+	}
+
+	.sample-cont h1 {
+		font-size: 28pt;
+
+	}
+}
+@media screen and (max-width:400px) {
+	.sample {
+		width: 85%;
+	}
+
+}

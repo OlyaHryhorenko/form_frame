@@ -1,0 +1,324 @@
+@import "compass/css3";
+@import "variables";
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content; 
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  } 
+}
+
+#bg-preloader{
+	position: fixed;
+	z-index: 10000000000000000000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	@include display-flex(flex);
+	@include align-items(center);
+	@include justify-content(center);
+	font: 400 16px $OpSans;
+}
+#preloader-text{
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	font: 16px arial;
+}
+.cssload-preloader {
+	font-size: 19px;
+	display: block;
+	width: 3.75em;
+	height: 4.25em;
+	margin: 0 auto 20px;
+	@include transform-origin(center center);
+	transform-origin: center center;
+	-webkit-transform-origin: center center;
+	@include transform(rotateY(180deg) rotateZ(-60deg));
+}
+
+.cssload-preloader .cssload-slice {
+	border-top: 1.125em solid transparent;
+	border-right: none;
+	border-bottom: 1em solid transparent;
+	border-left: 1.875em solid #BF171E;
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	@include transform-origin(left bottom);
+	transform-origin: left bottom;
+	-webkit-transform-origin: left bottom;
+	@include border-radius(3px 3px 0 0);
+}
+
+.cssload-preloader .cssload-slice:nth-child(1) {
+	@include transform(rotateZ(60deg) rotateY(0deg) rotateX(0));
+	@include animation(0.17s linear 0.94s preload-hide-1 both 1);
+}
+
+.cssload-preloader .cssload-slice:nth-child(2) {
+	@include transform(rotateZ(120deg) rotateY(0deg) rotateX(0));
+	@include animation(0.17s linear 0.85s preload-hide-2 both 1);
+}
+
+.cssload-preloader .cssload-slice:nth-child(3) {
+	@include transform(rotateZ(180deg) rotateY(0deg) rotateX(0));
+	@include animation(0.17s linear 0.76s preload-hide-3 both 1);
+}
+
+.cssload-preloader .cssload-slice:nth-child(4) {
+	@include transform(rotateZ(240deg) rotateY(0deg) rotateX(0));
+	@include animation(0.17s linear 0.67s preload-hide-4 both 1);
+}
+
+.cssload-preloader .cssload-slice:nth-child(5) {
+	@include transform(rotateZ(300deg) rotateY(0deg) rotateX(0));
+	@include animation(0.17s linear 0.58s preload-hide-5 both 1);
+}
+
+.cssload-preloader .cssload-slice:nth-child(6) {
+	@include transform(rotateZ(360deg) rotateY(0deg) rotateX(0));
+	@include animation(0.17s linear 0.48s preload-hide-6 both 1);
+}
+
+.cssload-preloader.cssload-loading {
+	@include animation(2.3s preload-flip steps(2) infinite both);
+}
+
+.cssload-preloader.cssload-loading .cssload-slice:nth-child(1) {
+	@include transform(rotateZ(60deg) rotateY(90deg) rotateX(0));
+	@include animation(2.3s preload-cycle-1 linear infinite both);
+}
+
+.cssload-preloader.cssload-loading .cssload-slice:nth-child(2) {
+	@include transform(rotateZ(120deg) rotateY(90deg) rotateX(0));
+	@include animation(2.3s preload-cycle-2 linear infinite both);
+}
+
+.cssload-preloader.cssload-loading .cssload-slice:nth-child(3) {
+	@include transform(rotateZ(180deg) rotateY(90deg) rotateX(0));
+	@include animation(2.3s preload-cycle-3 linear infinite both);
+}
+
+.cssload-preloader.cssload-loading .cssload-slice:nth-child(4) {
+	@include transform(rotateZ(240deg) rotateY(90deg) rotateX(0));
+	@include animation(2.3s preload-cycle-4 linear infinite both);
+}
+
+.cssload-preloader.cssload-loading .cssload-slice:nth-child(5) {
+	@include transform(rotateZ(300deg) rotateY(90deg) rotateX(0));
+	@include animation(2.3s preload-cycle-5 linear infinite both);
+}
+
+.cssload-preloader.cssload-loading .cssload-slice:nth-child(6) {
+	@include transform(rotateZ(360deg) rotateY(90deg) rotateX(0));
+	@include animation(2.3s preload-cycle-6 linear infinite both);
+}
+
+@include keyframes(preload-show-1) {
+  	from {
+		@include transform(rotateZ(60deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+}
+
+@include keyframes(preload-hide-1) {
+  	to {
+		@include transform(rotateZ(60deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+}
+
+@include keyframes(preload-cycle-1) {
+  	5% {
+  		@include transform(rotateZ(60deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+	10%,
+		75% {
+			@include transform(rotateZ(60deg) rotateY(0) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+	80%,
+		100% {
+		@include transform(rotateZ(60deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+}
+
+@include keyframes(preload-show-2) {
+  	from {
+		@include transform(rotateZ(120deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+}
+
+@include keyframes(preload-hide-2) {
+  	to {
+		@include transform(rotateZ(120deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+}
+
+@include keyframes(preload-cycle-2) {
+  	10% {
+		@include transform(rotateZ(120deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+	15%,
+		70% {
+		@include transform(rotateZ(120deg) rotateY(0) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+	75%,
+		100% {
+		@include transform(rotateZ(120deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+}
+
+@include keyframes(preload-show-3) {
+  	from {
+		@include transform(rotateZ(180deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+}
+
+@include keyframes(preload-hide-3) {
+  	to {
+		@include transform(rotateZ(180deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+}
+
+@include keyframes(preload-cycle-3) {
+  	15% {
+		@include transform(rotateZ(180deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+	20%,
+		65% {
+		@include transform(rotateZ(180deg) rotateY(0) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+	70%,
+		100% {
+		@include transform(rotateZ(180deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: rgb(156,47,47);
+	}
+}
+
+@include keyframes(preload-show-4) {
+  	from {
+		@include transform(rotateZ(240deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: rgb(191,23,29);
+	}
+}
+
+@include keyframes(preload-hide-4) {
+  	to {
+		@include transform(rotateZ(240deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+}
+
+@include keyframes(preload-cycle-4) {
+  	20% {
+		@include transform(rotateZ(240deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+	25%,
+		60% {
+		@include transform(rotateZ(240deg) rotateY(0) rotateX(0deg));
+		border-left-color: #BF171E;
+	}
+	65%,
+		100% {
+		@include transform(rotateZ(240deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+}
+
+@include keyframes(preload-show-5) {
+  	from {
+		@include transform(rotateZ(300deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+}
+
+@include keyframes(preload-hide-5) {
+  	to {
+		@include transform(rotateZ(300deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+}
+
+@include keyframes(preload-cycle-5) {
+  	25% {
+		@include transform(rotateZ(300deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+	30%,
+		55% {
+		@include transform(rotateZ(300deg) rotateY(0) rotateX(0deg));
+		border-left-color: #BF171E;
+	}
+	60%,
+		100% {
+		@include transform(rotateZ(300deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+}
+
+@include keyframes(preload-show-6) {
+  	from {
+		@include transform(rotateZ(360deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+}
+
+@include keyframes(preload-hide-6) {
+  	to {
+		@include transform(rotateZ(360deg) rotateY(-90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+}
+
+@include keyframes(preload-cycle-6) {
+  	30% {
+		@include transform(rotateZ(360deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+	35%,
+		50% {
+		@include transform(rotateZ(360deg) rotateY(0) rotateX(0deg));
+		border-left-color: #BF171E;
+	}
+	55%,
+		100% {
+		@include transform(rotateZ(360deg) rotateY(90deg) rotateX(0deg));
+		border-left-color: #9c2f2f;
+	}
+}
+
+@include keyframes(preload-flip) {
+  	0% {
+		transform: rotateY(0deg) rotateZ(-60deg);
+	}
+	100% {
+		transform: rotateY(360deg) rotateZ(-60deg);
+	}
+}

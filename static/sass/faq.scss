@@ -1,0 +1,151 @@
+@import "compass/css3";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700);
+$colorTheme : #005596;
+.page-faq{
+	padding-top: 30px;
+	text-align: center;
+	p{
+		padding-bottom: 30px;
+		text-align: center;
+		color: #888787;
+		font-size: 15px;
+		font-family: "Myriad Pro",sans-serif;
+	}
+}
+#hidden-faq{
+	display: none!important;
+}
+h1+p{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+}
+.faq-list{
+	max-width: 850px;
+	margin: 0 auto; 
+	padding-bottom: 30px;
+	text-align: left;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	.bg-faq-number{
+		float: left;
+		height: 1px;
+		max-width: 210px;
+		width: 25%;
+	}
+	.faq-item{
+		margin: 0 0 17px;
+		border: 2px solid $colorTheme;
+		@include border-radius(10px);
+		&.open{
+			background: $colorTheme;
+			.question{
+				color: #fff;
+				&:after{
+					@include transform(rotate(180deg));
+					margin-top: -4px;
+					border-top: 7px solid #fff;
+				}
+				.number{
+					background: #fff;
+					color: #000;
+					@include border-radius(7px 0 0 0);
+				}
+			}
+			.answer{
+				p{
+					color: #fff;
+					text-align: left;
+				}
+			}
+		}
+	}
+	.question{
+		cursor: pointer;
+		position: relative;
+		@include display-flex(flex);
+		@include align-items(stretch);
+		@include transition(all .15s linear);
+		& *::selection{
+			background: transparent;
+		}
+		.number{
+			@include border-radius(6px 0 0 6px);
+			background: $colorTheme;
+			color: #fff;
+			    line-height: 1;
+		}
+		p{
+			padding: 10px 60px 12px 40px;
+			line-height: 1.2;
+			color: inherit;
+			text-align: left;
+			font-size: 18px;
+			font-weight: 400;
+		}
+		&:after{
+			@include transition(all .15s linear);
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			margin-top: -3px;
+			right: 30px;
+			border-left: 6px solid transparent;
+		    border-right: 6px solid transparent;
+		    border-top: 7px solid $colorTheme;
+		}
+	}
+	.bg-answer{
+		display: none;
+	}
+	.answer{
+		position: relative;
+		@include display-flex(flex);
+		@include align-items(stretch);
+		.number{
+			@include border-radius(0 0 0 6px);
+		}
+		.faq-answer{
+			padding-left: 40px;
+			padding-right: 6%;
+		}
+		p{
+			border-top: 2px solid #fff;
+			padding-top: 20px;
+			font-size: 14px;
+			padding-bottom: 17px;
+		}
+		
+	}
+	.number{
+		color: #000;
+		min-width: 104px;
+		background: #fff;
+		font: 700 25px 'Open Sans', sans-serif;
+		@include box-sizing(border-box);
+		@include transition(color .15s linear);
+		@include display-flex(flex);
+		@include justify-content(center);
+		@include align-items(center);
+	}
+}
+
+
+@media all and (max-width: 950px) {
+	.faq-list .bg-faq-number{
+		width: 40%;
+	}
+}
+
+@media all and (max-width: 750px) {
+	.faq-list .question p{
+		font-size: 18px;
+		padding-left: 20px;
+	}
+	.faq-list .answer .faq-answer{
+		padding-left: 20px;
+		padding-right: 60px;
+	}
+
+}

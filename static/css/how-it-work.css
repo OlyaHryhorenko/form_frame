@@ -1,0 +1,139 @@
+#how-it-works h1{
+	color: #80CFAF;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0;
+    padding: 50px 0 30px;
+}
+#how-it-works .glob-container .header-how-it {
+    color: #16162f;
+    text-transform: uppercase;
+    text-align: center;
+}
+#how-it-works .glob-container p {
+    padding: 17px 0 21px;
+    color: #000;
+    text-align: left;
+    line-height: 1.9;
+}
+#how-it-works .glob-container p::selection {
+    background: #000;
+    color: #fff;
+}
+#how-it-works .glob-container .how-it-work-container {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 1137px;
+    margin: 0 auto;
+}
+#how-it-works .glob-container .how-it-work-container .how-it-work-item {
+        -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    border-color: #dd4b39;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+#how-it-works .glob-container .how-it-work-container .how-it-work-item *::selection {
+    background: transparent;
+}
+#how-it-works .glob-container .how-it-work-container .how-it-work-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 15px solid transparent;
+    border-left-color: #80CFAF;
+    right: -50px;
+    top: 33%;
+}
+#how-it-works .glob-container .how-it-work-container .how-it-work-item.img-four:after {
+    content: "";
+    border: 0;
+}
+#how-it-works .glob-container .how-it-work-container .how-it-work-item .name {
+    padding: 24px 0;
+    color: #6d6d6d;
+    text-transform: uppercase;
+}
+
+#how-it-works .glob-container .how-button {
+    clear: both;
+    text-align: center;
+    display: block;
+    margin: 30px 0 70px;
+}
+#how-it-works .glob-container .how-button a {
+    background-color: #80CFAF;
+    text-decoration: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    -moz-transition: all .15s linear;
+    -o-transition: all .15s linear;
+    -webkit-transition: all .15s linear;
+    transition: all .15s linear;
+}
+#how-it-works .glob-container .how-button a::selection {
+    background: transparent;
+}
+#how-it-works .glob-container .how-button a:hover {
+    background-color: #fff;
+    border: 2px solid #80CFAF;
+    color: #80CFAF;
+}
+
+@media all and (max-width: 750px) {
+    #how-it-works .glob-container .how-it-work-container .how-it-work-item {
+        float: none;
+        width: 100%;
+        height: auto;
+        /*min-height: 550px;*/
+        padding-bottom: 20px;
+        margin: 0 auto 25px;
+        }
+    #how-it-works .glob-container .how-button {
+        margin-top: 80px;
+    }
+}
+
+.how-it-work-item img {
+    height: 100px;
+    width: auto;
+}
+.how-it-work-item.img-four img{
+	height: 70px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    #how-it-works .glob-container .how-it-work-container .how-it-work-item {
+        margin: 20px 15px;
+    }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    #how-it-works .glob-container .how-it-work-container .how-it-work-item:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border: 15px solid transparent;
+        border-top: 15px solid #dd4b39;
+        right: 45%;
+        top: unset;
+        bottom: 0;
+    }
+    #how-it-works .glob-container .how-it-work-container .how-it-work-item.img-four:after {
+        content: "";
+        border: 0;
+    }
+}

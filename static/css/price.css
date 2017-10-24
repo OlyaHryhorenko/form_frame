@@ -1,0 +1,225 @@
+header {
+	position: relative;
+}
+.header-top {
+	background-color: #797a79;
+}
+.wrapper {
+	background-color: #e6ede9;
+}
+
+
+.price {
+	background-color:  rgba(227, 235, 230, .7);
+	background-image: repeating-linear-gradient( -45deg, 
+		transparent, transparent 0.1em, 
+		rgba(249, 250, 249, .8) 0.001em, rgba(249, 250, 249, .8) 0.4em
+		); 
+}
+.price-screen {
+	color: #575757;
+	position: relative;
+	width: 98%;
+	padding: 30px 0px 40px 0;
+	padding-top: 50px;
+	text-align: center;
+	margin: 0 auto;
+
+}
+
+.tab {
+	cursor: pointer;
+	width: 50%;
+	display: block;
+	float: left;
+	font-size: 30pt;
+	z-index: 100;
+	color: #545454;
+	font-style: italic;
+	position: relative;
+	z-index: 5;
+	background-color: #e6eee9;
+}
+.ro {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-bottom: 0px;
+}
+.tab p {
+	margin: 0;
+	display: inline-block;
+	padding: 10px 0;
+}
+.tab-one {
+	float: left;
+}
+.tab-two {
+	float: right;
+}
+
+.act {
+	background-color: transparent;
+}	
+
+.tab_contеnt {
+	width: 98%;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 3px;
+	margin-top: -0x;
+	display: inline-block;
+}
+.tab_item {
+	padding: 10px 0;
+}
+table {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+table td {
+	width: 16.6666%;
+	font-size: 19pt;
+	padding: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+	-o-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-icab-transition: 0.3s;
+	font-family: CenturyGothic;
+}
+table td a {
+    color: #575757;
+    text-decoration: none;
+}
+
+table td:first-child {
+	border: 0;
+}
+table td:hover {
+	font-weight: 900;
+	background-color: #e6ede9;
+}
+
+table th {
+	font-size: 14pt;
+	padding-bottom: 20px;
+	font-weight: bold;
+	padding-top: 30px;
+}
+
+
+@media screen and (max-width:1280px) {
+	.tab {
+		font-size: 26pt;
+		padding: 10px 0;
+	}
+	table td {
+		font-size: 15pt;
+	}
+	table th {
+		font-size: 14pt;
+	}
+}
+
+
+@media screen and (max-width:1024px) {
+	.tab {
+		font-size: 24pt;
+		padding: 10px 0;
+	}
+
+	table td {
+		font-size: 14pt;
+		padding: 15px;
+	}
+	table th {
+		font-size: 12pt;
+		padding: 15px 0;
+	}
+}
+
+@media screen and (max-width:992px) {
+
+	.price-screen {
+		padding-top: 40px;
+	}
+	.tab_content {
+		margin-top: 30px;
+	}
+	.tab {
+		font-size: 17pt;
+		padding: 5px 0;
+	}
+	table td {
+		font-size: 12pt;
+		padding: 10px;
+	}
+	table th {
+		font-size: 10pt;
+		padding: 10px 0;
+	}
+}
+
+@media screen and (max-width:767px) {
+	.price-screen {
+		padding-top: 25px;
+	}
+	.tab {
+		font-size: 11pt;
+		padding: 5px 0;
+	}
+	.tab p {
+		padding: 0;
+	}
+	.tab_item {
+		padding: 10px 0 10px 0;
+	}
+	table td {
+		font-size: 10pt;
+		padding: 5px;
+	}
+	table th {
+		font-size: 8pt;
+		padding: 5px 0;
+	}
+}
+@media screen and (max-width:610px) {
+	.tab_item {
+		padding: 0px 0 10px 0;
+	}
+	.tab {
+		font-size: 11pt;
+		padding: 5px 0 5px 0;
+	}
+	table td {
+		font-size: 6pt;
+		padding: 3px;
+	}
+	table th {
+		font-size: 6pt;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.tab {
+		font-size: 10pt;
+	}
+
+	table th {
+		font-size: 4.5pt;
+	}
+}
+
+@media screen and (max-width:400px) {
+	.tab {
+		font-size: 8pt;
+	}
+	table th {
+		font-size: 4pt;
+	}
+}

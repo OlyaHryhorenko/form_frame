@@ -1,0 +1,129 @@
+#global-modal {
+display: none;
+}
+
+#global-modal {
+    position: fixed;
+    top: -200%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999;
+    -moz-transition: top .4s linear;
+    -o-transition: top .4s linear;
+    -webkit-transition: top .4s linear;
+    transition: top .4s linear;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+#global-modal .bg-modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(57, 58, 55, 0.63);
+}
+#global-modal .modal-window {
+    z-index: 20;
+    position: relative;
+    width: 100%;
+    max-width: 508px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background:#fff;
+    padding: 40px;
+}
+#global-modal.open {
+    top: 0;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+.modal .logo {
+color: #22d4f4;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: "FuturaDemiC";
+    font-size: 43px;
+    line-height: 43px;
+    letter-spacing: 1px;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    position: relative;
+    text-align: center
+}
+#global-modal .modal-footer {
+padding: 0;
+}
+#global-modal .modal-window .close {
+position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 14px;
+    height: 14px;
+    background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAYAAACZ3F9/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3tpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpjNjA2Y2I5My1iM2NlLTRhZWEtYmFlMi01ZjcyYTc0ZTgzZmYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODgwQTE0RkQ1RDc5MTFFNkJBMUNCNzlDNDc4RjQwRDciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODgwQTE0RkM1RDc5MTFFNkJBMUNCNzlDNDc4RjQwRDciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNBRDA5QzNDMzYyMDY4MTE4MjJBRTdCQ0YzRjZDNTVBIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6ZjlhNmJiNzgtOWE1ZS0xMTc5LTg4NzUtZTVhMTgxOTY2Mzg2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+rmAdoQAAARFJREFUeNp8kjFrAkEQhXevEJTY2KWRlKnEMopFSCmKHDlT+dPsgyh3YC4hVRQR7GyCtVqlSJdAAhae78kcTNYzCx97N/veztzM2SRJTBRF1hjTAu++729MxoLmGlsFDKFJPInPwRisILjLMDG2BAMwY8yGYXiFfa10v8yOW9+UKQZ5pbmk0cpB0zXLs2tiqQ8e68VLF0zUIYUvgjY9gd6xVDZHSirwNiezcUwBEu3+GMWcwzYFNce0ALepictzBA1QzchWlTNzYjzTPf3NsR6V94/pWcg0cxwX2LegpESvoCPPI9BWZ9+gzIzWMXEs92yENCOQjqarCPacI2+og0/wKH/NT6pS5j74ADeIfR0EGACwZWVFO69fUQAAAABJRU5ErkJggg==) center center no-repeat;
+    border: 0;
+    cursor: pointer;
+}
+#global-modal input {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border: 1px solid #fff;
+    background: transparent;
+    margin-bottom: 20px;
+    color: #e6dfb6;
+}
+.modal-header {
+    text-transform: uppercase;
+    text-align: center;
+    color: #e6dfb6;
+    font-size: 2em;
+}
+
+.modal .error {
+display: none;
+}
+#global-modal button#log-in-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    color: #fff;
+    margin-right: auto;
+    background-color: #e6dfb6;
+    border: none;
+    padding: 20px 0;
+    font-size: 22px;
+    line-height: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#global-modal .forgot {
+color: #e6dfb6;
+text-align: left;
+padding-top: 5px;
+}
+#global-modal .forgot a {
+text-decoration: underline;
+}

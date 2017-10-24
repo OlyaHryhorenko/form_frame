@@ -1,0 +1,296 @@
+@import "compass/css3";
+@import "variables";
+#how-it-works{
+	margin: 50px auto 52px;
+	.glob-container{
+		.header-how-it{
+			color: #16162f;
+			font: 700 30px $OpSans;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		p{
+			&::selection{
+				background: #000;
+				color: #fff;
+			}
+			padding: 17px 0 21px;
+			color: #000;
+			font: 400 15px "Myriad Pro",sans-serif;
+			text-align: left;
+			line-height: 1.9;
+		}
+		.how-it-work-container{
+			@include box-sizing(border-box);
+			max-width: 1137px;
+			margin: 0 auto;
+			.how-it-work-item{
+				*::selection{
+					background: transparent;
+				}
+				@include box-sizing(border-box);
+				max-width: 550px;
+				width: 47.8%;
+				height: 570px;
+				float: left;
+				text-align: center;
+				position: relative;
+				background-color: #d9d9d9;
+				background-repeat: no-repeat;
+				@include background-size(100% auto);
+				background-position: bottom right;
+				border-color: #d9d9d9;
+				margin-left: 1.1%;
+				margin-right: 1.1%;
+				@include transition(all 0.15s linear);
+				&:after{
+					content: "";
+					display: block;
+					position: absolute;
+					border: 25px solid transparent;
+				}
+				&:hover{
+					background-color: #000000;
+					border-color: #000000;
+				}
+				.name{
+					padding: 24px 0;
+					font: 700 18px $OpSans;
+					color: #fff;
+					text-transform: uppercase;
+				}
+			}
+			.img-one{
+				@include box-sizing(border-box);
+				margin-bottom: 2.2%;
+				background-image: url(../img/how-it-work1.png);
+				&:after{
+					border-left-color: inherit;
+					right: -50px;
+					top: 50%;
+				}
+				
+			}
+			.img-two{
+				@include box-sizing(border-box);
+				background-image: url(../img/how-it-work2.png);
+				background-position: 10px bottom;
+				margin-bottom: 2.2%;
+				
+				&:after{
+					border-top-color: inherit;
+					right: 46%;
+					bottom: -50px;
+				}
+			}
+			.img-three{
+				@include box-sizing(border-box);
+				background-image: url(../img/how-it-work3.png);
+				margin-bottom: 2.2%;
+
+				&:after{
+					display: none;
+				}
+			}
+			.img-four{
+				background-image: url(../img/how-it-work4.png);
+				@include box-sizing(border-box);
+				float: right;
+				&:after{
+					border-right-color: inherit;
+					left: -50px;
+					top: 50%;
+				}
+			}
+		}
+		.how-button{
+			clear: both;
+			text-align: center;
+			display: block;
+			margin-top: 30px;
+			a{
+			    background-color: #BF171E;
+			    text-decoration: none;
+			    border: none;
+			    color: #fff;
+			    font-size: 16px;
+			    padding: 15px 20px;
+			    font: 400 17px "Open Sans",sans-serif;
+			    text-transform: uppercase;
+			    @include transition(all .15s linear);
+			    &::selection{
+					background: transparent;
+				}
+			    &:hover{
+			    	background: #000;
+			    }
+			}
+		}
+	}
+}
+
+@media all and (max-width: 1050px) {
+	#how-it-works{
+		.glob-container{
+			.how-it-work-container{
+				.how-it-work-item{
+					height: 480px;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 870px) {
+	#how-it-works{
+	.glob-container{
+		.header-how-it{
+		}
+		p{
+		}
+		.how-it-work-container{
+			.how-it-work-item{
+				height: 420px;
+				&:after{
+				}
+				&:hover{
+				}
+				.name{
+				}
+				.images{
+					img{
+					}
+					.litle-img{
+					}
+				}
+			}
+			.img-one{
+				margin-bottom: 3.5%;
+				&:after{
+				}
+				
+			}
+			.img-two{
+				margin-bottom: 3.5%;
+				&:after{
+				}
+			}
+			.img-three{
+				margin-bottom: 3.5%;
+				&:after{
+				}
+			}
+			.img-four{
+				&:after{
+				}
+			}
+		}
+	}
+}
+}
+
+@media all and (max-width: 750px) {
+	#how-it-works{
+		.glob-container{
+			.how-it-work-container{
+				.how-it-work-item{
+					float: none;
+					width: 100%;
+					height: auto;
+					min-height: 550px; 
+					padding-bottom: 20px;
+					margin: 0 auto 25px;
+					&:after{
+						
+					}
+				}
+				.img-one{
+					&:after{
+					   	content: '';
+					   	top: 100%;
+						bottom: -50px;
+					    border-top-color: inherit;
+					    right: auto;
+						margin-left: -25px;
+					    left: 50%;
+					    border-left-color: transparent;
+					}
+				}
+				.img-two{
+					&:after{
+					   content: '';
+					   top: 100%;
+						bottom: -50px;
+					   	border-top-color: inherit;
+					    right: auto;
+						margin-left: -25px;
+					    left: 50%;
+					}
+				}
+				.img-three{
+					&:after{
+				   		content: '';
+				   		position: absolute;
+				   		display: block;
+				   		top: 100%;
+						bottom: -50px;
+					    border-top-color: inherit;
+					    right: auto;
+						margin-left: -25px;
+					    left: 50%;
+					}
+				}
+				.img-four{
+					&:after{
+				   		content: '';
+					   	top: 100%;
+						bottom: -50px;
+						border-right-color: transparent;
+					   	border-top-color: inherit;
+					    right: auto;
+						margin-left: -25px;
+					    left: 50%;
+					}
+				}
+			}
+			.how-button{
+				margin-top: 80px;
+			}
+		}	
+	}   
+}
+
+
+@media all and (max-width: 500px) {
+	#how-it-works{
+		.glob-container{
+			.how-it-work-container{
+				.how-it-work-item{
+					min-height: 480px;
+				}
+			}
+		}
+	}
+}
+@media all and (max-width: 430px) {
+	#how-it-works{
+		.glob-container{
+			.how-it-work-container{
+				.how-it-work-item{
+					min-height: 409px;
+				}
+			}
+		}
+	}
+}
+@media all and (max-width: 350px) {
+	#how-it-works{
+		.glob-container{
+			.how-it-work-container{
+				.how-it-work-item{
+					min-height: 353px;
+				}
+			}
+		}
+	}
+}

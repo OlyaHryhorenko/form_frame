@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800,400italic);
+
+@include font-face(
+	"Starjedi",
+	font-files(
+		"Starjedi.woff2",
+		"Starjedi.otf",
+		"Starjedi.woff",
+		"Starjedi.ttf",
+		"Starjedi.svg#Starjedi"
+	),
+	"Starjedi.eot",
+	400
+);
+
+@include font-face(
+	"Hijrnotes",
+	font-files(
+		"Hijrnotes.woff2",
+		"Hijrnotes.otf",
+		"Hijrnotes.woff",
+		"Hijrnotes.ttf",
+		"Hijrnotes.svg#Hijrnotes"
+	),
+	"Hijrnotes.eot",
+	400
+);
+
+@include font-face(
+	"NoteworthyBold",
+	font-files(
+		"NoteworthyBold.woff2",
+		"NoteworthyBold.otf",
+		"NoteworthyBold.woff",
+		"NoteworthyBold.ttf",
+		"NoteworthyBold.svg#NoteworthyBold"
+	),
+	"NoteworthyBold.eot",
+	700
+);
+
+@include font-face(
+	"GothamPro",
+	font-files(
+		"GothamPro-Light.woff2",
+		"GothamPro-Light.woff",
+		"GothamPro-Light.otf",
+		"GothamPro-Light.ttf",
+		"GothamPro-Light.svg#GothamPro-Light"
+	),
+	"GothamPro-Light.eot",
+	300
+);
+
+@include font-face(
+	"GothamPro",
+	font-files(
+		"GothamPro-Medium.woff2",
+		"GothamPro-Medium.woff",
+		"GothamPro-Medium.otf",
+		"GothamPro-Medium.ttf",
+		"GothamPro-Medium.svg#GothamPro-Medium"
+	),
+	"GothamPro-Medium.eot",
+	600
+);
+
+@include font-face(
+	"GothamPro",
+	font-files(
+		"GothamPro-Bold.woff2",
+		"GothamPro-Bold.woff",
+		"GothamPro-Bold.otf",
+		"GothamPro-Bold.ttf",
+		"GothamPro-Bold.svg#GothamPro-Bold"
+	),
+	"GothamPro-Bold.eot",
+	700
+);
+
+@include font-face(
+	"Myriad Pro",
+	font-files(
+		"MyriadProRegular.woff2",
+		"Myriad Pro Regular.woff",
+		"Myriad Pro Regular.ttf",
+		"Myriad Pro Regular.otf",
+		"Myriad Pro Regular.svg"
+	),
+	"Myriad Pro Regular.eot",
+	400
+);

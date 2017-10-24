@@ -1,0 +1,80 @@
+/******************fonts variables*/
+$OpSans: 'Open Sans', sans-serif;
+$other: $OpSans;
+
+$gotham : "GothamPro", $other;
+$myriad : "Myriad Pro", $other;
+$NoteworthyBold : "NoteworthyBold", $other;
+$Starjedi : "Starjedi", $other;
+$Hijrnotes : "Hijrnotes", $other;
+/********** media */
+$mobileMore: "751px";
+$mediaQuery1100: "1100px";
+$mediaQuery1000: "1000px";
+$mediaQuery950: "950px";
+$mediaQuery900: "900px";
+$mediaQuery850: "850px";
+$mobile: "750px";
+$small: "600px";
+$mediaQuery550: "550px";
+$mediaQuery460: "460px";
+
+@mixin mediaQuery1100{
+	@media (max-width: #{$mediaQuery1100}) {
+		@content;
+	}
+}
+
+@mixin mediaQuery1000{
+	@media (max-width: #{$mediaQuery1000}) {
+		@content;
+	}
+}
+
+@mixin mediaQuery950{
+	@media (max-width: #{$mediaQuery950}) {
+		@content;
+	}
+}
+
+@mixin mediaQuery900{
+	@media (max-width: #{$mediaQuery900}) {
+		@content;
+	}
+}
+
+@mixin mediaQuery850{
+	@media (max-width: #{$mediaQuery850}) {
+		@content;
+	}
+}
+
+@mixin mobile{
+	@media (max-width: #{$mobile}) {
+		@content;
+	}
+}
+
+@mixin small {
+    @media (max-width: #{$small}) {
+        @content;
+    }
+}
+
+@mixin mediaQuery550 {
+    @media (max-width: #{$mediaQuery550}) {
+        @content;
+    }
+}
+
+@mixin mobileMore{
+	@media (min-width: #{$mobileMore}) {
+		@content;
+	}
+}
+
+@mixin mediaQuery460{
+	@media (max-width: #{$mediaQuery460}) {
+		@content;
+	}
+}

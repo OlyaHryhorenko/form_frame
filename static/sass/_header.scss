@@ -1,0 +1,404 @@
+#fixed-header{
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 100;
+	@include transition(all .2s linear);
+	&.opened{
+		background: rgba(0,0,0,.8);
+		padding-bottom: 15px;
+	}
+}
+#glob-header{
+	overflow: hidden;
+	&.bg-header-two{
+		overflow: visible;
+	}
+	.glob-container{
+		position: relative;
+		#bg-header{
+			position: absolute;
+			left: -188px;
+			top: 0;
+			z-index: 1;
+			&::selection{
+				background-color: transparent;
+			}
+		}
+		#glob{
+			z-index: 2;
+			height: 45px;
+		}
+		.glob-toogle{
+		  float: right;
+		  background: transparent;
+		  @include box-sizing(border-box);
+		  cursor: pointer;
+		  height: 30px;
+		  margin-top: 14px;
+		  width: 32px;
+		  @include transition(all 0.2s linear);
+		  span {
+		    background-color: #fff;
+		    display: block;
+		    height: 3px;
+		    width: 100%;
+		    margin: 6px 0;
+		  }
+		  &.open{
+		  	@include transform(rotate(90deg));
+		  }
+		}
+		.glob-nav{
+			text-align: center;
+			padding-top: 18px;
+			margin-right: 50px;
+			.header-logo{
+				margin-left: 15px;
+				display: inline-block;
+				float: left;
+				@include transition(all .1s linear);
+				*::selection{
+					background: transparent;
+				}
+			}
+			&::selection{
+				background-color: transparent;
+			}
+			.header-nav{
+				margin: 0 auto;
+				display: inline-block;
+				&::selection{
+					background-color: transparent;
+				}
+				li{
+					list-style: none;
+					display: inline-block;
+					padding: 0 25px;
+					position: relative;
+					&::selection{
+						background-color: transparent;
+					}
+					a{
+						&::selection{
+							background-color: transparent;
+						}
+						color: #fff;
+						font: 400 14px $OpSans;
+						text-decoration: none;
+						@include text-shadow(0 0 3px rgba(0,0,0,.5));
+						text-transform: uppercase;
+
+						&:hover{
+							
+						}
+					}
+					&:after{
+                        content: '';
+                        display: block;
+                        width: 0;
+                        background-color: #BE161E;
+                        height: 2px;
+                        @include transition(all .2s linear);
+                    }
+                    &:hover{
+                        &:after{
+                            width: 100%;
+                        }
+                    }
+                    &.active-page{
+                        &:after{
+                            width: 100%;
+                        }
+                    }
+				}
+			}
+			.glob-contact{
+				float: right;
+				padding-top: 2px;
+				margin-right: 37px;
+				&::selection{
+					background-color: transparent;
+				}
+				a{
+					background: transparent url(../img/chat-twet-face-login.png) no-repeat;
+					display: inline-block;
+					margin: 0 5px;
+					height: 20px;
+					&::selection{
+						background-color: transparent;
+					}
+					@include transition(all .1s linear);
+					&.chat{
+						width: 27px;
+						height: 21px;
+						background-position: left top;
+					}
+					&.fb{
+						width: 19px;
+						background-position: -28px center;
+					}
+					&.twit{
+						width: 19px;
+						background-position: -48px center;
+					}
+					&.login{
+						width: 25px;
+						margin-left: 0;
+						background-position: right center;
+					}
+				}
+			}
+		}
+	}
+	.glob-first-screen{
+		@include box-sizing(border-box);
+		width: 100%;
+		position: relative;
+		z-index: 1;
+		&::selection{
+			background-color: transparent;
+		}
+		.glob-container{
+			.left_first{
+				float: left;
+				width: 50%;
+				img{
+					&::selection{
+						background-color: transparent;
+					}
+				}
+			}
+			.right_first{
+				@include box-sizing(border-box);
+				padding: 88px 0 100px 0;
+				float: right;
+				width: 50%;
+				.h-first{
+					@include box-sizing(border-box);
+					max-width: 500px;
+					text-align: right;
+					font: 400 96px $Starjedi;
+					color: #ffffff;
+					line-height: 1;
+					padding-bottom: 80px;
+					br{
+						&::selection{
+							background-color: transparent;
+						}
+					}
+					&::selection{
+						background-color: transparent;
+					}
+					@include text-shadow(2px 2px 8px #000);
+					span{
+						padding-left: 10px;
+						img{
+							&::selection{
+								background-color: transparent;
+							}
+						}
+					}
+				}
+				.calc{
+					.footer-text{
+						&::selection{
+							background-color: transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.bg-header-two{
+	background: url(../img/bg-glob-two.jpg) top center repeat-x;
+	@include background-size(auto 100%);
+	height: auto;
+	padding: 40px 0;
+}
+
+@media all and (max-width: 1060px) {
+	#glob-header .glob-first-screen .glob-container .left_first{
+		width: 0;
+	}
+	#glob-header .glob-first-screen .glob-container .right_first{
+		width: 100%;
+		.h-first{
+			margin: 0 auto;
+		}
+		.calc{
+			max-width: 515px;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+@include mobileMore {
+	#glob-header{
+		.glob-container{
+			.glob-nav{
+				.header-nav{
+					li{
+						position: relative;
+						top: -100px;
+						@include transition(top .3s linear);
+					}
+				}
+				.glob-contact{
+					a{
+						@include border-radius(50%);
+						@include transform(scale(0));
+					}
+				}
+			}
+		}
+		&.open-menu{
+			.glob-container{
+				.glob-nav{
+					.header-nav{
+						li.opened-item{
+							top: 0;
+						}
+					}
+					.glob-contact{
+						.opened-item{
+							@include border-radius(0);
+							@include transform(scale(1));
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include mediaQuery950 {
+	#glob-header{
+		.glob-first-screen{
+			.glob-container{
+				.left_first{
+					width: 0;
+				}
+				.right_first{
+					width: 100%;
+
+				}
+			}
+		}
+	}
+}
+
+@include mobile {
+	#bg-header{
+		display: none;
+	}
+	#glob-header{
+		background: #000 url(../img/bg-glob-two.jpg) bottom center repeat-x;
+		.glob-container{
+			padding: 0;
+			.glob-toogle{
+				position: relative;
+				z-index: 20;
+				margin-right: 15px;
+			}
+		}
+		&.open-menu{
+			.glob-container .glob-nav .header-nav{
+				@include transform(scale(1));
+			}	
+		}
+	}
+	#glob-header .glob-first-screen .glob-container .right_first .calc{
+		display: none!important;
+	}
+	#glob-header .glob-container .glob-nav{
+		position: relative;
+		margin-right: 0;
+		&:after{
+			clear: both;
+			width: 100%;
+			display: block;
+			content: '';
+		}
+		.header-nav{
+			padding-top: 15px;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			right: 0;
+			top: 100%;
+			@include transform(scale(0));
+			@include transition(all .15s linear);
+			@include transform-origin(right top);
+			transform-origin: right top;
+			-webkit-transform-origin: right top;
+			z-index: 10;
+			li{
+				display: block;
+				width: 100%;
+				padding: 0;
+				border-top: 1px solid #fff;
+				margin: 0;
+				background-color: #000;
+				&:last-child{
+					border-bottom: 1px solid #fff;
+				}
+				&:after{
+					display: none;
+				}
+				&.active-page{
+					background: #BF171E;
+				}
+				a{
+					padding: 10px 0;
+					display: block;
+					width: 100%;
+
+				}
+			}
+		}
+	}
+	#glob-header .glob-first-screen{
+		position: static;
+	}
+	#glob-header .glob-first-screen .glob-container{
+		.bg-header{
+			display: none;
+		}
+		.left_first{
+			display: none!important;
+		}
+
+		.right_first{
+			padding: 60px 0 70px;
+			width: 100%!important;
+			height: auto;
+			position: relative;
+			z-index: 1;
+
+			.h-first{
+				margin: 0 auto;
+				display: block;
+				width: 100%;
+			}
+			.calc{
+				display: none!important;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 550px) {
+	#glob-header .glob-first-screen .glob-container .right_first .h-first{
+		font-size: 40px;
+		max-width: 220px;
+		img{
+			width: 50px;
+			height: auto;
+		}
+	}
+}

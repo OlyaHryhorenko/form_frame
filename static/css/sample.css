@@ -1,0 +1,223 @@
+header {
+	position: relative;
+}
+.header-top {
+	background-color: #797a79;
+}
+.wrapper {
+	background-color: #e5ede8;
+}
+
+
+.cont {
+	padding-bottom: 110px;
+	padding-top: 120px;
+}
+.samples {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.sample-cont {
+	padding-bottom: 100px;
+}
+
+.exampleparts {
+	margin-bottom: 60px;
+	position: relative;
+}
+
+
+
+
+.span-icon-geography,
+.span-icon-chemistry,
+.span-icon-marketing,
+.span-icon-mathimatics {
+	display: block;
+	position: absolute;
+	background-repeat: no-repeat;
+}
+
+.span-icon-mathimatics {
+	background-image: url(../img/samples/mathematic-icon.png);
+	width: 40px;
+	height: 40px;
+	top: 0;
+}
+.span-icon-geography {
+	background-image: url(../img/samples/geography-icon.png);
+	width: 40px;
+	height: 40px;
+	top: 0;
+}
+.span-icon-marketing {
+	background-image: url(../img/samples/marketing-icon.png);
+	width: 20px;
+	height: 40px;
+	top: 0;
+	left: 10px;
+}
+.span-icon-chemistry {
+	background-image: url(../img/samples/chemistry-icon.png);
+	width: 40px;
+	height: 40px;
+	top: 0;
+	left: 0px;
+}
+
+.mathemathics:hover .span-icon-mathimatics {
+	background-image: url(../img/samples/mathematic-hover.png);
+}
+.geography:hover .span-icon-geography {
+	background-image: url(../img/samples/geogrphy-hover.png);
+}
+.marketing:hover .span-icon-marketing {
+	background-image: url(../img/samples/marketing-hover.png);
+}
+.chemistry:hover .span-icon-chemistry {
+	background-image: url(../img/samples/chemistry-hover.png);
+}
+
+
+
+
+
+
+
+.exampleparts a {
+	color: #303030;
+	transition: 0.3s;
+	-o-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	display: block;
+}
+.exampleparts a:hover {
+	text-decoration: none;
+	transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+}
+
+.ex-text {
+	height: 80%;
+	text-align: left;
+	color: #303030;
+	font-size: 14pt;
+	position: relative;
+	font-weight: normal;
+	line-height: 1.1;
+	z-index: 10;
+}
+.ex-text p {
+	margin-bottom: 30px;
+	padding-left: 45px;
+	font-style: italic;
+	font-size: 18pt;
+}
+.ex-text span {
+	display: inline-block;
+	font-size: 12pt;
+	font-weight: normal;
+	padding:3px 0;
+}
+span.r-text {
+	text-align: left;
+	padding-left: 20px;
+}
+
+span.l-text {
+	text-align: left;
+}
+
+
+
+
+@media screen and (max-width:767px) {
+	.cont {
+		padding-top: 15px;
+	}
+	.samples {
+		padding-top: 10px;
+		padding-bottom: 30px;
+	}
+	.exampleparts {
+		padding: 10px;
+		margin: 0 auto;
+		padding-bottom: 10px;
+		margin-bottom: 25px;
+	}
+	.sample-cont {
+		padding-bottom: 60px;
+	}
+	.sample-cont h3 {
+		font-size: 11pt;
+	}
+	.exampleparts a {
+		font-size: 12pt;
+	}
+	.ex-text {
+		font-size: 10pt;
+
+	}
+	.ex-text p {
+		margin-bottom: 30px;
+	}
+}
+
+
+
+
+@media screen and (max-width:560px) {
+	.sample-cont h3 {
+		font-size: 10pt;
+	}
+	.ex-text {
+		font-size: 10pt;
+	}
+	.exampleparts {
+		padding: 5px 5px 10px 5px;
+	}
+	.ex-text p {
+		margin-bottom: 20px;
+		font-size: 14pt;
+	}
+	.ex-text span {
+		font-size: 9pt;
+	}
+	.sample-cont {
+		padding-bottom: 40px;
+	}
+	.cont {
+		padding-bottom: 30px;
+	}
+	.span-icon-mathimatics {
+		top: -5px;
+	}
+
+	.span-icon-geography {
+		top: -5px;
+	}
+	.span-icon-marketing {
+		top: -10px;
+	}
+	.span-icon-chemistry {
+		top: -5px;
+	}
+}
+
+
+@media screen and (max-width:400px) {
+	.ex-text p {
+		font-size: 12pt;
+	}
+	.ex-text span {
+		font-size: 8pt;
+	}
+	span.r-text {
+		padding-left: 10px;
+	}
+}

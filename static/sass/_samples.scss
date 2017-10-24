@@ -1,0 +1,271 @@
+#glob-samples{
+	max-width: 1115px;
+	width: 100%;
+	max-height: 1700px;
+	@include box-sizing(border-box);
+	padding: 0 10px 40px;
+	margin: 0 auto;
+	&.hidden-for-animation{
+		opacity: 0;
+	}
+	&.samples-preload{
+		.samples-list{
+			opacity: 0;
+		}
+	}
+	@include transition(all .4s linear);
+	.samples_header{
+		height: 80px;
+		background: #fff; 
+		@include display-flex(flex);
+		@include justify-content(flex-start);
+		@include transition(all .1s linear);
+		border: 1px solid #000;
+		@include box-sizing(border-box);
+		.grid-view, .slider-view{
+			width: 80px;
+			@include display-flex(flex);
+			cursor: pointer;
+			padding: 20px;
+			@include box-sizing(border-box);
+			@include align-content(center);
+			@include justify-content(center);
+			@include align-items(center);
+			@include flex-wrap(wrap);
+			@include transition(all .1s linear);
+			div{
+				width: 10px;
+				height: 10px;
+				background: #000;
+				margin: 3px;
+				@include transition(background .1s linear);
+			}
+		}
+		#active-samples-view{
+			background: #000;
+			div{
+				background: #fff;
+			}
+		}
+	}
+	.samples-list{
+		@include transition(all .2s linear);
+		width: 100%;
+		opacity: 1;
+		position: relative;
+		border: 1px solid #000;
+		border-top: 0;
+		@include box-sizing(border-box);
+		.bg-samples{
+			margin-top: 0;
+			position: relative;
+			@include display-flex(flex);
+			@include flex-wrap(wrap);
+		}
+		&.grid-samples-list{
+			
+		}
+		&.slider-samples-list{
+			.bg-samples{
+				
+			}
+		}
+		&:after{
+			clear: both;
+			content: '';
+			display: block;
+			width: 100%;
+		}
+		.samples-item{
+			width: 50%;
+			@include transition(all .2s linear);
+			position: relative;
+			font-family: $gotham;
+			background-color: #fff;
+			z-index: 1;
+			&.rotate-hidden{
+				@include transform(rotateY(90deg));
+			}
+			&:hover{
+				z-index: 20!important;
+				box-shadow: 0 0 50px rgba(0,0,0,.5);
+				@include transform(scale(1.06));
+				img{
+					@include transform(scale(1.14));
+				}
+			}
+			@include box-sizing(border-box);
+			&:nth-child(2n) {
+				text-align: left;
+				padding-left: 34px;
+				img{
+					right: 10px;
+					@include transform-origin(bottom right);
+					transform-origin: bottom right;
+					-webkit-transform-origin: bottom right;
+				}
+				.samples-link{
+					left: 34px;
+				}
+			}
+			&:nth-child(2n+1) {
+				text-align: right;
+				padding-right: 34px;
+				img{
+					left: 10px;
+					@include transform-origin(bottom left);
+					transform-origin: bottom left; 
+					-webkit-transform-origin: bottom left;
+				}
+				.samples-link{
+					right: 34px;
+				}
+			}
+			img{
+				position: absolute;
+				bottom: 0;
+				@include transition(all .25s linear);
+				&::selection{
+					background-color: transparent;
+				}
+			}
+			strong{
+				text-transform: uppercase;
+				color: #000;
+				font-size: 64px;
+				font-weight: 700;
+				display: block;
+				padding-top: 54px;
+				padding-bottom: 5px;
+				&::selection{
+					background-color: transparent;
+				}
+			}
+			p{
+				&::selection{
+					background-color: transparent;
+				}
+				color: #000;
+				font-weight: 300;
+				font-size: 16px;
+				text-indent: 0;
+				padding: 0;
+				margin: 0;
+				text-align: inherit;
+				padding-bottom: 2px;
+			}
+			.samples-link{
+				width: 59px;
+				height: 61px;
+				display: inline-block;
+				background: transparent url(../img/docIcon.svg) right center no-repeat;
+				@include background-size(200% auto);
+				position: absolute;
+				bottom: 69px;
+				&::selection{
+					background-color: transparent;
+				}
+			}
+			&.dark-sample-item{
+				background: #171717;
+				background: -moz-radial-gradient(center, ellipse cover, #2B2B2B 0%, #070707 100%);
+				background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #2B2B2B), color-stop(100%, #070707));
+				background: -webkit-radial-gradient(center, ellipse cover, #2B2B2B 0%, #070707 100%);
+				background: -o-radial-gradient(center, ellipse cover, #2B2B2B 0%, #070707 100%);
+				background: -ms-radial-gradient(center, ellipse cover, #2B2B2B 0%, #070707 100%);
+				background: radial-gradient(ellipse at center, #2B2B2B 0%, #070707 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2B2B2B', endColorstr='#070707',GradientType=1 );
+				background-repeat: no-repeat;
+				strong, p{
+					color: #fff;
+				}
+				.samples-link{
+					background-position: left center;
+				}
+			}
+		}
+	}
+}
+
+.slider-samples-list{
+	.samples-item{
+
+	}
+	.samples-item.hidden{
+		@include transform(scale(.8));
+		@include transform-origin(top center);
+		transform-origin: top center;
+		-webkit-transform-origin: top center;
+	}
+}
+
+#samples-marker{
+	text-align: center;
+	button{
+		display: inline-block;
+		padding: 0;
+		@include box-sizing(border-box);
+		background-color: transparent;
+		border: 1px solid #000;
+		width: 20px;
+		height: 20px;
+		@include border-radius(50%);
+		margin: 0 6px;
+		cursor: pointer;
+		margin-top: 58px;
+		@include transition(all .1s linear);
+		&:focus{
+			outline: 0;
+		}
+		&#act-btn{
+			background-color: #000;
+		}
+	}
+}
+
+@media all and (max-width: 1150px) {
+	#glob-samples .samples-list .samples-item strong{
+		font-size: 40px;
+		padding-bottom: 40px;
+	}
+	#glob-samples .samples-list .samples-item img{
+		max-height: 100%;
+	}
+	#glob-samples{
+		overflow: hidden;
+	}
+}
+
+@media all and (max-width: 800px) {
+	#glob-samples .samples-list .samples-item .samples-link{
+		bottom: 15px;
+	}
+}
+
+@media all and (max-width: 750px) {
+	#glob-samples{
+		margin-top: 20px;
+		overflow: visible;
+		max-width: 500px;
+		.samples_header{
+			display: none;
+		}
+		.samples-list{
+			border-top: 1px solid #000;
+			.samples-item{
+				width: 100%;
+			}
+		}
+	}
+	#samples-marker button{
+		margin: 30px 4px 0;
+	}
+}
+
+@media all and (max-width: 400px) {
+	#glob-samples .samples-list .samples-item strong{
+		font-size: 32px;
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+}

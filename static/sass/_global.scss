@@ -1,0 +1,89 @@
+body {
+  font-family: $OpSans;
+  line-height: 1.2;
+}
+html{
+  min-width: 320px;
+}
+.clear{
+  clear: both;
+}
+.glob-container{
+  max-width: 1170px;
+  @include box-sizing(border-box);
+  height: auto;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.line-glob{
+  border-top: 2px solid #BF171E;
+  max-width: 100px;
+  margin: 0 auto 20px;
+}
+ul{
+  li{
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 15px;
+    font: 400 16px $OpSans;
+    color: #000000;
+  }
+}
+ol{
+  li{
+    list-style-type: decimal;
+    list-style-position: outside;
+    padding-left: 15px;
+    font: 400 16px $OpSans;
+    color: #000000;
+  }
+}
+.ui-selectmenu-menu{
+  ul{
+    max-height: 240px;
+    li{
+      padding: 0;
+    }
+  }
+}
+p{
+  font: 400 16px $OpSans;
+  text-align: left;
+  color: #000000;
+  padding-bottom: 20px;
+  text-indent: 10px;
+}
+h1,h2,h3,h4,h5,h6, .header{
+  text-align: center;
+  font: 800 30px $OpSans;
+  text-transform: uppercase;
+  &h1,&h2,&h3,&h4,&h5,&h6{
+    color: #000000;
+    
+  }
+}
+h1,h2,h3,h4,h5,h6, .glob-h .header{
+  &::selection{
+      background-color: #000;
+      color: #fff;
+    }
+}
+.red-button{
+  color: #fff;
+  text-decoration: none;
+  background-color: #BF171E;
+  text-transform: uppercase;
+  font: 400 17px $OpSans;
+  @include transition(all .1s linear);
+  &:hover{
+    background-color: #fff;
+    color: #BF171E;
+  }
+}
+
+.glob-content .glob-container{
+  ul *::selection, ol *::selection, p::selection{
+    background-color: #000;
+    color: #fff;
+  }
+}
